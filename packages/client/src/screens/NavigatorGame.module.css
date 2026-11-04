@@ -1,0 +1,70 @@
+.page {
+  background: #0c1018;
+  color: #f4f7fb;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 980px;
+  min-height: 100vh;
+  padding: 28px 24px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eyebrow {
+  color: #79a8ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  margin: 0;
+}
+
+.room {
+  background: #151c29;
+  border: 1px solid #293549;
+  border-radius: 8px;
+  color: #a7b3c7;
+  font-size: 0.8rem;
+  padding: 8px 11px;
+}
+
+.mazePanel {
+  align-items: center;
+  background: #151c29;
+  border: 1px solid #293549;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  min-height: 460px;
+  overflow: auto;
+  padding: 24px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 22px 14px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mazePanel {
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 14px;
+  }
+}

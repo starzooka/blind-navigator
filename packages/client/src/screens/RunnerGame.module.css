@@ -1,0 +1,105 @@
+.page {
+  align-items: center;
+  background: #05070b;
+  color: #f4f7fb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 28px 18px;
+}
+
+.header {
+  text-align: center;
+}
+
+.eyebrow {
+  color: #79a8ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 3rem);
+  margin: 0;
+}
+
+.help,
+.mobileHint {
+  color: #8794a9;
+  font-size: 0.9rem;
+}
+
+.viewport {
+  align-items: center;
+  background: #000;
+  border: 1px solid #293549;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  padding: 28px;
+  position: relative;
+  touch-action: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.cell,
+.darkCell {
+  align-items: center;
+  border: 2px solid #53627a;
+  box-sizing: border-box;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  width: 56px;
+}
+
+.cell {
+  background: #101722;
+}
+
+.darkCell {
+  background: #000;
+  border-color: #000;
+}
+
+.runnerMarker {
+  background: #79a8ff;
+  border: 2px solid #f4f7fb;
+  border-radius: 50%;
+  box-shadow: 0 0 18px #79a8ff;
+  height: 25px;
+  width: 25px;
+}
+
+.signalOverlay {
+  align-items: center;
+  background: #151c29e8;
+  border: 2px solid #79a8ff;
+  border-radius: 50%;
+  display: flex;
+  font-size: 4rem;
+  font-weight: 800;
+  height: 120px;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+@media (max-width: 420px) {
+  .viewport {
+    padding: 14px;
+  }
+}

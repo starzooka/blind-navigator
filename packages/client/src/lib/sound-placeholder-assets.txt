@@ -1,0 +1,7 @@
+Supply these files under packages/client/public/audio/:
+
+- step.mp3 — successful runner movement
+- bump.mp3 — blocked runner movement
+- signal-received.mp3 — navigator signal received by runner
+- win.mp3 — winning round
+- lose.mp3 — losing round

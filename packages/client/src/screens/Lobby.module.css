@@ -1,0 +1,176 @@
+.page {
+  align-items: center;
+  background: #0c1018;
+  color: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card {
+  background: #151c29;
+  border: 1px solid #293549;
+  border-radius: 20px;
+  box-shadow: 0 24px 70px #00000040;
+  max-width: 520px;
+  padding: 42px;
+  width: 100%;
+}
+
+.eyebrow {
+  color: #79a8ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.subtitle {
+  color: #a7b3c7;
+  line-height: 1.6;
+  margin: 18px 0 28px;
+}
+
+.codePanel {
+  align-items: center;
+  background: #0f1520;
+  border: 1px solid #34435b;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 20px;
+}
+
+.difficultyLabel {
+  color: #c4cede;
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.difficultySelect {
+  background: #0f1520;
+  border: 1px solid #34435b;
+  border-radius: 9px;
+  color: #f4f7fb;
+  font: inherit;
+  margin-top: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.difficultySelect:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.code {
+  color: #f4f7fb;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.copyButton,
+.readyButton {
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 44px;
+  padding: 0 18px;
+}
+
+.copyButton {
+  background: #273750;
+  color: #f4f7fb;
+}
+
+.readyButton {
+  background: #79a8ff;
+  color: #0c1018;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.readyButton:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.players {
+  margin-top: 28px;
+}
+
+.player,
+.emptySlot {
+  align-items: center;
+  border-bottom: 1px solid #293549;
+  display: flex;
+  gap: 12px;
+  min-height: 62px;
+}
+
+.emptySlot {
+  color: #68758a;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+.avatar {
+  align-items: center;
+  background: #273750;
+  border-radius: 50%;
+  color: #cbd9f2;
+  display: flex;
+  font-weight: 700;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.playerName {
+  flex: 1;
+  font-weight: 600;
+}
+
+.ready,
+.waiting {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ready {
+  color: #6de0a5;
+}
+
+.waiting {
+  color: #8794a9;
+}
+
+.error {
+  color: #ff8e9b;
+  font-size: 0.9rem;
+  margin: 18px 0 0;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 22px;
+  }
+
+  .code {
+    font-size: 1.6rem;
+  }
+}

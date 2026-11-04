@@ -1,0 +1,89 @@
+.page {
+  align-items: center;
+  background: #0c1018;
+  color: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card {
+  background: #151c29;
+  border: 1px solid #293549;
+  border-radius: 20px;
+  max-width: 430px;
+  padding: 42px;
+  text-align: center;
+  width: 100%;
+}
+
+.eyebrow {
+  color: #79a8ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin: 12px 0;
+}
+
+.win {
+  color: #6de0a5;
+}
+
+.lose {
+  color: #ff9a9f;
+}
+
+.score {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-top: 26px;
+}
+
+.scoreLabel {
+  color: #8794a9;
+  margin: 0;
+}
+
+.breakdown {
+  border-top: 1px solid #293549;
+  display: grid;
+  gap: 10px;
+  margin: 25px 0;
+  padding-top: 18px;
+}
+
+.breakdown div {
+  display: flex;
+  justify-content: space-between;
+}
+
+dt {
+  color: #a7b3c7;
+}
+
+dd {
+  font-weight: 700;
+  margin: 0;
+}
+
+.button {
+  background: #79a8ff;
+  border: 0;
+  border-radius: 9px;
+  color: #0c1018;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 48px;
+  width: 100%;
+}
+
+.warning {
+  color: #ffb36b;
+}

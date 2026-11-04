@@ -1,0 +1,81 @@
+.pad {
+  background: #151c29;
+  border: 1px solid #293549;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.header h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cooldown {
+  color: #79a8ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.buttons {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.button {
+  background: #202c40;
+  border: 1px solid #34435b;
+  border-radius: 9px;
+  color: #f4f7fb;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: 4px;
+  min-height: 58px;
+  padding: 9px 5px;
+}
+
+.button small {
+  color: #8794a9;
+  font-size: 0.7rem;
+}
+
+.button:hover:not(:disabled) {
+  background: #2b3c58;
+  border-color: #79a8ff;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.stop {
+  grid-column: span 2;
+}
+
+.danger {
+  color: #ff9a9f;
+}
+
+.good {
+  color: #6de0a5;
+}
+
+@media (max-width: 420px) {
+  .buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stop {
+    grid-column: span 1;
+  }
+}
