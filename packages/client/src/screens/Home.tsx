@@ -1,5 +1,5 @@
-import { useState, type FormEvent } from "react";
-import { socket } from "../lib/socket.js";
+import { useEffect, useState, type FormEvent } from "react";
+import { SERVER_URL, socket } from "../lib/socket.js";
 import { useGameStore } from "../store/gameStore.js";
 import styles from "./Home.module.css";
 
@@ -10,6 +10,11 @@ export function Home(): JSX.Element {
   const error = useGameStore((state) => state.error);
   const connectionStatus = useGameStore((state) => state.connectionStatus);
   const setError = useGameStore((state) => state.setError);
+  const isConnected = connectionStatus === "connected";
+
+  useEffect(() => {
+    void fetch(`${SERVER_URL}/health`).catch(() => undefined);
+  }, []);
 
   const createRoom = (): void => {
     setError("");
@@ -37,11 +42,11 @@ export function Home(): JSX.Element {
         </p>
         <button
           className={styles.primaryButton}
-          disabled={connectionStatus !== "connected"}
+          disabled={!isConnected}
           onClick={createRoom}
           type="button"
         >
-          Create room
+          {isConnected ? "Create room" : "Waking up the server..."}
         </button>
         <div className={styles.divider}>
           <span>or join a room</span>
@@ -61,10 +66,10 @@ export function Home(): JSX.Element {
             />
             <button
               className={styles.secondaryButton}
-              disabled={connectionStatus !== "connected"}
+              disabled={!isConnected}
               type="submit"
             >
-              Join
+              {isConnected ? "Join" : "Waking up the server..."}
             </button>
           </div>
         </form>

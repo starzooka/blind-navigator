@@ -5,12 +5,20 @@ import type {
 } from "shared";
 
 const playerTokenKey = "blind-navigator.player-token";
-
+export const SERVER_URL =
+  import.meta.env.VITE_SERVER_URL ?? "http://localhost:3000";
 export type TypedSocket = Socket<ServerToClientEvents, ClientToServerEvents>;
 
 export const socket: TypedSocket = io(
-  import.meta.env.VITE_SERVER_URL ?? "http://localhost:3000",
-  { autoConnect: false }
+  SERVER_URL,
+  {
+    autoConnect: false,
+    reconnection: true,
+    reconnectionAttempts: 12,
+    reconnectionDelay: 1000,
+    reconnectionDelayMax: 5000,
+    timeout: 65_000
+  }
 );
 
 export function getPlayerToken(): string | null {
